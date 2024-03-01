@@ -10,14 +10,14 @@ const html = srcFile.replace('<!--replace-->', 'repalace!')
 
 console.log(html)
 
-writeFile('./dist.html', html)
+writeFile('./dist/index.html', html)
 
 readFile('./template.html','utf8', (err, data) => {
   if (err) throw err;
   console.log(data);
   const html = data.replace('<!--replace-->', 'Replace!!');
   console.log(html)
-  writeFile('./dist.html', html )
+  writeFile('./dist/index.html', html )
 })
 /*
 async function check() {
